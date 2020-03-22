@@ -1,0 +1,90 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.f"
+	xmlns:fb="sap.ui.comp.filterbar" xmlns:vbm="sap.ui.vbm" xmlns:mic="sap.suite.ui.microchart" xmlns:vm="sap.ui.comp.variants"
+	xmlns:dnd="sap.ui.core.dnd" controllerName="cs.Cruscotto.controller.Master" height="100%">
+	<f:DynamicPage id="dynamicPageId" showFooter="true" headerExpanded="{/headerExpanded}">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<!--<vm:VariantManagement standardItemText="{i18n>firstPageTitle}"/>-->
+					<Title text="Project Monitoring Sample"/>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<!-- DynamicPage Header -->
+		<!-- DynamicPage Content -->
+		<f:content>
+			<VBox>
+				<FlexBox justifyContent="SpaceBetween">
+					<SearchField width="160%" id="idSearchField" class="sapUiMediumMarginBottom" placeholder="Search a project" liveChange="onSearchContract"/>
+					<ComboBox id="comboId" items="{ path: 'modelloBox>/' }">
+						<core:Item key="{modelloBox>key}" text="{modelloBox>text}"/>
+					</ComboBox>
+				</FlexBox>
+				<List id="idList" items="{ModelloPanel>/ItemSet}">
+					<items>
+						<CustomListItem>
+							<Panel expandable="true" expand="OnexpandPanel" expanded="false">
+								<headerToolbar>
+									<Toolbar height="4rem" style="Clear">
+										<Title text="{ModelloPanel>T}"/>
+										<Image class="sapUiSmallMarginBegin" densityAware="false" width="2rem"
+											src="{ModelloPanel>Flag}" />
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<Table id="tVisualizza" sticky="HeaderToolbar,ColumnHeaders" alternateRowColors="false" inset="true"
+										items="{path:'ModelloPanel>Content', templateShareable: 'true'}" noDataText="The project is not started yet !!! " contextualWidth="30px"
+										popinLayout="GridSmall">
+										<columns>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Employee " design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Project Role" design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Main Skills" design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Hours worked on the project" design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Expected working hours" design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Difference" design="Bold" wrapping="true"/>
+											</Column>
+											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
+												<Label text="Travel Costs" design="Bold" wrapping="true"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells >
+													<ObjectIdentifier title="{ModelloPanel>A}"/>
+													<Text text="{ModelloPanel>B}" wrapping="true"/>
+													<FlexBox justifyContent="Center">
+														<!--<ObjectIdentifier title="{modelloTabCantieri>codSapFornitore}" text="{modelloTabCantieri>ragione_sociale}"-->
+														<ObjectIdentifier title="{ModelloPanel>C}"/>
+														<core:Icon class="sapUiSmallMarginBegin" src="{ModelloPanel>Icon}" size="1.3rem" color="#71c8ec"></core:Icon>
+													</FlexBox>
+													<Text text="{ModelloPanel>D}"/>
+													<Text text="{ModelloPanel>E}"/>
+													<Text text="{ModelloPanel>F}"/>
+													<Text text="{ModelloPanel>G}"/>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</content>
+							</Panel>
+						</CustomListItem>
+					</items>
+				</List>
+			</VBox>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>
