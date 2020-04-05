@@ -1,0 +1,32 @@
+{"India":[{
+
+						"A": "Raul Duke",
+						"B": "Arch. Leader",
+						"C": "Cloud Foundry",
+						"Icon": "sap-icon://cloud",
+						"D": "10",
+						"E": "110",
+						"F": "100",
+						"G": "30$"
+					}, {
+
+						"A": "Milena Deus",
+						"B": "Project Manager",
+						"C": "Finance",
+						"Icon": "sap-icon://activity-items",
+						"D": "0",
+						"E": "100",
+						"F": "100",
+						"G": "370$"
+
+					}, {
+						"A": "Simon Numis",
+						"B": "Developer",
+						"C": "ABAP",
+						"Icon": "sap-icon://customer",
+						"D": "10",
+						"E": "200",
+						"F": "190",
+						"G": "120$"
+					}]
+}

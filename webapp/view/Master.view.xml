@@ -7,36 +7,34 @@
 		<f:title>
 			<f:DynamicPageTitle>
 				<f:heading>
-					<!--<vm:VariantManagement standardItemText="{i18n>firstPageTitle}"/>-->
 					<Title text="Project Monitoring Sample"/>
 				</f:heading>
 			</f:DynamicPageTitle>
 		</f:title>
-		<!-- DynamicPage Header -->
 		<!-- DynamicPage Content -->
 		<f:content>
 			<VBox>
 				<FlexBox justifyContent="SpaceBetween">
-					<SearchField width="160%" id="idSearchField" class="sapUiMediumMarginBottom" placeholder="Search a project" liveChange="onSearchContract"/>
-					<ComboBox id="comboId" items="{ path: 'modelloBox>/' }">
-						<core:Item key="{modelloBox>key}" text="{modelloBox>text}"/>
+					<SearchField width="160%" id="idSearchField" class="sapUiMediumMarginBottom" placeholder="Search a project" liveChange="_onSearchContract"/>
+					<ComboBox id="comboId" items="{ path: 'modelBox>/' }">
+						<core:Item key="{modelBox>key}" text="{modelBox>text}"/>
 					</ComboBox>
 				</FlexBox>
-				<List id="idList" items="{ModelloPanel>/ItemSet}">
+				<List id="idList" items="{PanelModel>/ItemSet}">
 					<items>
 						<CustomListItem>
-							<Panel expandable="true" expand="OnexpandPanel" expanded="false">
+							<Panel expandable="true" expand="_onexpandPanel" expanded="false">
 								<headerToolbar>
 									<Toolbar height="4rem" style="Clear">
-										<Title text="{ModelloPanel>T}"/>
+										<Title text="{PanelModel>T}"/>
 										<Image class="sapUiSmallMarginBegin" densityAware="false" width="2rem"
-											src="{ModelloPanel>Flag}" />
+											src="{PanelModel>Flag}" />
 										<ToolbarSpacer/>
 									</Toolbar>
 								</headerToolbar>
 								<content>
 									<Table id="tVisualizza" sticky="HeaderToolbar,ColumnHeaders" alternateRowColors="false" inset="true"
-										items="{path:'ModelloPanel>Content', templateShareable: 'true'}" noDataText="The project is not started yet !!! " contextualWidth="30px"
+										items="{path:'PanelModel>Content', templateShareable: 'true'}" noDataText="The project has not started yet !!! " contextualWidth="30px"
 										popinLayout="GridSmall">
 										<columns>
 											<Column hAlign="Center" demandPopin="true" popinDisplay="Inline">
@@ -64,17 +62,16 @@
 										<items>
 											<ColumnListItem>
 												<cells >
-													<ObjectIdentifier title="{ModelloPanel>A}"/>
-													<Text text="{ModelloPanel>B}" wrapping="true"/>
+													<ObjectIdentifier title="{PanelModel>A}"/>
+													<Text text="{PanelModel>B}" wrapping="true"/>
 													<FlexBox justifyContent="Center">
-														<!--<ObjectIdentifier title="{modelloTabCantieri>codSapFornitore}" text="{modelloTabCantieri>ragione_sociale}"-->
-														<ObjectIdentifier title="{ModelloPanel>C}"/>
-														<core:Icon class="sapUiSmallMarginBegin" src="{ModelloPanel>Icon}" size="1.3rem" color="#71c8ec"></core:Icon>
+														<ObjectIdentifier title="{PanelModel>C}"/>
+														<core:Icon class="sapUiSmallMarginBegin" src="{PanelModel>Icon}" size="1.3rem" color="#71c8ec"></core:Icon>
 													</FlexBox>
-													<Text text="{ModelloPanel>D}"/>
-													<Text text="{ModelloPanel>E}"/>
-													<Text text="{ModelloPanel>F}"/>
-													<Text text="{ModelloPanel>G}"/>
+													<Text text="{PanelModel>D}"/>
+													<Text text="{PanelModel>E}"/>
+													<Text text="{PanelModel>F}"/>
+													<Text text="{PanelModel>G}"/>
 												</cells>
 											</ColumnListItem>
 										</items>

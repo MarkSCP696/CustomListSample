@@ -55,7 +55,24 @@
 				"settings": {
 					"bundleName": "cs.Cruscotto.i18n.i18n"
 				}
+			},
+			"DataProjects": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/dataprojects.json"
+			},
+			"DataItaly": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/dataItaly.json"
+			},
+			"DataIndia": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/dataIndia.json"
+			},
+			"Months": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/dataMonths.json"
 			}
+			
 		},
 		"resources": {
 			"css": [

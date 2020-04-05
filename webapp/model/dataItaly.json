@@ -1,0 +1,47 @@
+{
+	"Italy": [{
+
+		"A": "Marco Pace",
+		"B": "Tech. Leader",
+		"C": "Fiori/UI5",
+		"Icon": "sap-icon://sap-ui5",
+		"D": "10",
+		"E": "100",
+		"F": "90",
+		"G": "30$"
+
+	}, {
+
+		"A": "Johana Gonzalez",
+		"B": "Project Manager",
+		"C": "Finance",
+		"Icon": "sap-icon://activity-items",
+		"D": "10",
+		"E": "100",
+		"F": "90",
+		"G": "300$"
+
+	}, {
+
+		"A": "Lucas Crazy",
+		"B": "Developer",
+		"C": "Java/SQL",
+		"Icon": "sap-icon://developer-settings",
+		"D": "10",
+		"E": "100",
+		"F": "90",
+		"G": "10$"
+
+	}, {
+
+		"A": "Cesar Flavicon",
+		"B": "Functional An.",
+		"C": "Meeting",
+		"Icon": "sap-icon://call",
+		"D": "10",
+		"E": "100",
+		"F": "90",
+		"G": "120$"
+
+	}]
+}
