@@ -5,7 +5,7 @@ sap.ui.define([
 
 	return Controller.extend("cs.Cruscotto.controller.Master", {
 
-			//Loading project names and main data form local json (model folder)
+			//Load project names and main data form local json (model folder)
 			onInit: function () {
 				var view = this.getView();
 				var oDataModelProjects = this.getOwnerComponent().getModel("DataProjects").getData();
