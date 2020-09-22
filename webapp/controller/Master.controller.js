@@ -17,7 +17,7 @@ sap.ui.define([
 				view.setModel(model2, "modelBox");
 				view.byId("comboId").setSelectedKey("A");
 			},
-			//Set Flag images
+			//Set Flag images comment
 			_setImages: function (data) {
 				var arr = data.ItemSet;
 				for (var i = 0; i < arr.length; i++) {
